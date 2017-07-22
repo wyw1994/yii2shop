@@ -21,9 +21,9 @@
         <td><?=($v->status)<0?"回收":(($v->status)==0?"隐藏":"正常")?></td>
         <td>
             <!--<a href="" class="btn btn-info btn-sm">查看</a>-->
-            <a href="edit/?id=<?=$v->id?>" class="btn btn-warning btn-sm">修改</a>
+            <a href="/brand/edit/?id=<?=$v->id?>" class="btn btn-warning btn-sm">修改</a>
 
-           <a href="<?=($v->status)<0?'restore':'del'?>/?id=<?=$v->id?>" class="btn btn-danger btn-sm"><?=($v->status)<0?'恢复':'删除'?></a>
+           <a href="/brand/<?=($v->status)<0?'restore':'del'?>/?id=<?=$v->id?>" class="btn btn-danger btn-sm"><?=($v->status)<0?'恢复':'删除'?></a>
         </td>
     </tr>
     <?php endforeach;?>
