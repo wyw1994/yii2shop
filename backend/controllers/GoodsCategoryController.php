@@ -82,14 +82,16 @@ class GoodsCategoryController extends \yii\web\Controller
          $model = GoodsCategory::findOne(['id'=>$id]);
         if($model->load(\Yii::$app->request->post()) && $model->validate()){
 
-
-
-
-
         }
         //获取所以分类数据
         $categories = GoodsCategory::find()->select(['id','parent_id','name'])->asArray()->all();
-        return $this->render('edit',['model'=>$model,'categories'=>$categories]);
+        return $this->render('add',['model'=>$model,'categories'=>$categories]);
 
     }
+
+
+
+
+
+
 }
